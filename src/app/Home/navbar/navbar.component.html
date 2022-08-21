@@ -1,0 +1,8 @@
+<div class="navbar" [ngStyle]="{'height':70, 'display':'flex', 'justify-content':'space-around', 'background-color':'beige'}">
+  <img src="https://th.bing.com/th?q=Free+School+Logo+Design&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.77&pid=InlineBlock&mkt=en-WW&cc=KE&setlang=en&adlt=moderate&t=1&mw=247" height=40 width=50/>
+  <h3>The jitu school</h3>
+  <a [ngStyle]="{'border':'none', 'margin-top':'20px', 'align-content':''}" (click)="onclick()" *ngIf="authService.isLoggedIn()">Admin Dashboard</a>
+  <button [ngStyle]="{'height':'30px', 'width':'70px', 'background-color':'gold', 'border':'none', 'margin-top':'15px', 'border-radius':'8px'}" (click)="onLogout()" *ngIf="authService.isLoggedIn()">Logout</button>
+  <button [ngStyle]="{'height':'30px', 'width':'70px', 'background-color':'gold', 'border':'none', 'margin-top':'15px', 'border-radius':'8px'}" (click)="onclick()" *ngIf="!authService.isLoggedIn()">Login</button>
+
+</div>

@@ -1,0 +1,15 @@
+.students{
+ gap:3%;
+}
+.add{
+  box-shadow: 5px 2px 2px purple;
+  border-radius: 5px;
+  height: 30px;
+  width:70px;
+  background-color: gold;
+  margin-left: 3%;
+}
+input, option, select{
+  width:70px;
+  height:15px;
+}
