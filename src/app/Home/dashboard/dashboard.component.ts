@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Injectable } from '@angular/core';
 import { Student } from 'src/app/Interfaces/StudentInterface';
 import { StudentService } from 'src/app/Services/student.service';
 import { FilterPipe } from 'src/app/Pipe/filter.pipe';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn:'root'
@@ -16,26 +17,19 @@ export class DashboardComponent implements OnInit {
   // public FilterPipe: any = '';
   @Input() student!:Student[]
   filter=''
-  constructor( private studentService:StudentService) { }
+  constructor( private studentService:StudentService, private router:Router) { }
 
   ngOnInit(): void {
-    this.student=this.studentService.getStudents()
-  }
-  onAdd(student:Student){
-    this.student.push(student)
-    }
 
+  }
     onBalance(){
-      this.student= this.studentService.getStudents().filter(v=> v.balance>0)
-      console.log('clicked');
+      this.router.navigate(['dashboard/balance'])
     }
     onnoBalance(){
-      this.student= this.studentService.getStudents().filter(v=> v.balance===0)
-      console.log('clicked');
+      this.router.navigate(['dashboard/nobalance'])
     }
     onAll(){
-      this.student= this.studentService.getStudents().filter(v=> v.balance>=0)
-      console.log('clicked');
+      this.router.navigate(['dashboard'])
     }
 
 }

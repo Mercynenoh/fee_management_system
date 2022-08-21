@@ -11,8 +11,8 @@ body{
 }
 
 #rocket{
-	width:275px;
-	height:375px;
+	width:255px;
+	height:63vh;
 	background:url('../assets/img/rocket.png') no-repeat;
 	margin:140px auto 50px;
   margin-top:0;

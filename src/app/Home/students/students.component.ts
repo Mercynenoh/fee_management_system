@@ -7,7 +7,7 @@ import { Student } from 'src/app/Interfaces/StudentInterface';
   styleUrls: ['./students.component.css']
 })
 export class StudentsComponent implements OnInit {
-  @Output() addCar= new EventEmitter<Student>()
+  @Output() addStudent= new EventEmitter<Student>()
   filter=''
   name=''
   gender=''
@@ -18,7 +18,7 @@ export class StudentsComponent implements OnInit {
       alert('Empty Fields!!!')
     }
 else{
-    this.addCar.emit({
+    this.addStudent.emit({
       name:this.name,
       gender:this.gender,
       class:this.class,

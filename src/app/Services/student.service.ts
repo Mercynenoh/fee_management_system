@@ -5,6 +5,7 @@ import { Student } from '../Interfaces/StudentInterface';
   providedIn: 'root',
 })
 export class StudentService {
+
   getStudents(): Student[] {
     return [
       {
@@ -26,6 +27,8 @@ export class StudentService {
         balance: 0,
       },
     ];
+
+
   }
   constructor() {}
 }
