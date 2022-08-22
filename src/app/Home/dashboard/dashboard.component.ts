@@ -14,13 +14,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  // public FilterPipe: any = '';
   @Input() student!:Student[]
   filter=''
   constructor( private studentService:StudentService, private router:Router) { }
 
   ngOnInit(): void {
-    this.studentService.getStudents()
 
   }
     onBalance(){
@@ -31,6 +29,9 @@ export class DashboardComponent implements OnInit {
     }
     onAll(){
       this.router.navigate(['dashboard'])
+    }
+    onAdd(){
+      this.router.navigate(['dashboard/addstudent'])
     }
 
 }

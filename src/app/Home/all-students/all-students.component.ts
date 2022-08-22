@@ -8,15 +8,14 @@ import { StudentService } from 'src/app/Services/student.service';
   styleUrls: ['./all-students.component.css']
 })
 export class AllStudentsComponent implements OnInit {
-  @Input() student!:Student[]
+student!:Student[]
   filter=''
   constructor( private studentService:StudentService) { }
 
   ngOnInit(): void {
-    this.student=this.studentService.getStudents()
+    this.student = this.studentService.getStudents()
+    // console.warn(this.student);
+
   }
-  onAdd(student:Student){
-    this.student.push(student)
-    }
 
 }

@@ -1,15 +1,16 @@
 <div class="students">
   <h3>Add New Student</h3>
+  <p *ngIf=empty [ngStyle]="{'color':'red'}">Empty Fields!!</p>
   <label>Student Name</label>
-  <input [(ngModel)]="name"/>
+  <input [(ngModel)]="student.name"/>
   <label>Gender</label>
-  <select [(ngModel)]="gender">
+  <select [(ngModel)]="student.gender">
     <option value="Male">Male</option>
      <option value="Female">Female</option>
   </select>
   <label>Class</label>
-  <input type="text" [(ngModel)]="class"  id=""/>
+  <input type="text" [(ngModel)]="student.class"  id=""/>
   <label>Balance</label>
-  <input [(ngModel)]="balance"/>
+  <input [(ngModel)]="student.balance"/>
   <button class="add" (click)="onAdd()">Add</button>
 </div>

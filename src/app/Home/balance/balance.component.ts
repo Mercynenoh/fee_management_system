@@ -9,7 +9,8 @@ import { StudentService } from 'src/app/Services/student.service';
 })
 export class BalanceComponent implements OnInit {
   @Input() student!:Student[]
-  filter='' 
+  filter=''
+
   constructor(private studentService:StudentService) { }
 
   ngOnInit(): void {

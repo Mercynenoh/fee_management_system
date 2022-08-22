@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Output, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Student } from 'src/app/Interfaces/StudentInterface';
+import { StudentService } from 'src/app/Services/student.service';
 
 @Component({
   selector: 'app-students',
@@ -7,33 +9,36 @@ import { Student } from 'src/app/Interfaces/StudentInterface';
   styleUrls: ['./students.component.css']
 })
 export class StudentsComponent implements OnInit {
-  @Output() addStudent= new EventEmitter<Student>()
+
+  constructor( private router:Router, public StudentService:StudentService ) { }
+  student:Student={
+  name:'',
+  gender:'',
+  class:'',
+  balance:0
+
+  }
   filter=''
-  name=''
-  gender=''
-  class=''
-  balance=0
+  empty=false
   onAdd(){
-    if (this.name===''||this.gender===''||this.class===''){
-      alert('Empty Fields!!!')
+    if (this.student.name===''||this.student.gender===''||this.student.class===''){
+      this.empty=true
+      setTimeout(() => {
+        this.empty=false
+      }, 1000);
     }
 else{
-    this.addStudent.emit({
-      name:this.name,
-      gender:this.gender,
-      class:this.class,
-      balance:this.balance
-    })
-  }
-    this.name=''
-     this.gender=''
-     this.class=''
-     this.balance=0
+   this.StudentService.addStudent(this.student)
+   console.log((this.student));
+
+    this.router.navigate(['dashboard'])
+
+  } 
 
   }
 
 
-  constructor() { }
+
 
   ngOnInit(): void {
   }

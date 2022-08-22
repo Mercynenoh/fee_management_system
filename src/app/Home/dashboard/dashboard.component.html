@@ -1,9 +1,10 @@
 <div class="main" [ngStyle]="{ display: 'flex', gap: '150px', 'margin-top': '20px' }">
   <div class="left" [ngStyle]="{ display: 'flex', 'flex-direction': 'column', gap: '20px' }">
     <h3> Select Category to view</h3>
-    <button (click)="onAll()">All Students</button>
-    <button (click)="onBalance()">Students With Balance</button>
-    <button (click)="onnoBalance()">Students With no balance</button>
+    <a (click)="onAll()" routerLink="/dashboard" routerLinkActive="active"  [routerLinkActiveOptions]="{exact:true}" >All Students</a>
+    <a routerLink="dashboard/balance" routerLinkActive="active" (click)="onBalance()">Students With Balance</a>
+    <a routerLink="dashboard/nobalance" routerLinkActive="active"  (click)="onnoBalance()">Students With no balance</a>
+    <a (click)="onAdd()" routerLink="dashboard/addstudent" routerLinkActive="active">Add New Student</a>
   </div>
   <div class="right">
     <router-outlet></router-outlet>

@@ -18,6 +18,7 @@ import { AllStudentsComponent } from './Home/all-students/all-students.component
 import { NoBalanceComponent } from './Home/no-balance/no-balance.component';
 import { NamesPipe } from './Pipe/names.pipe';
 import { WelcomePipe } from './Pipe/class.pipe';
+import { NobalancePipe } from './Pipe/nobalance.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,23 +33,13 @@ import { WelcomePipe } from './Pipe/class.pipe';
     AllStudentsComponent,
     NoBalanceComponent,
     NamesPipe,
-    WelcomePipe
+    WelcomePipe,
+    NobalancePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot([
-      {path: '', component: WelcomeComponent, children:[
-        {path: 'login',component: LoginComponent},
-      ]},
-      {path: 'dashboard', canActivate:[AuthGuard], component: DashboardComponent, children:[
-        {path: '', canActivate:[AuthGuard], component:AllStudentsComponent},
-        {path: 'balance', canActivate:[AuthGuard], component:BalanceComponent},
-        {path: 'nobalance',canActivate:[AuthGuard], component:NoBalanceComponent}
-      ]},
-      {path: '**', component: ErrorComponent},
-    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

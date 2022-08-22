@@ -2,10 +2,11 @@
 <img src="https://th.bing.com/th/id/OIP.rEuiZehhsDGBB2yimpUnAAHaE8?w=247&h=180&c=7&r=0&o=5&dpr=1.77&pid=1.7"/>
   <div class="login">
     <h1>Login Here</h1>
+    <p *ngIf=valid [ngStyle]="{ 'color':'red'}"> Wrong Credentials</p>
     <label>Username</label>
-    <input [(ngModel)]="username">
+    <input [(ngModel)]="username" [ngStyle]="{ border:islogin && username==''? ' 2px solid red':''}">
     <label>Password</label>
-    <input [(ngModel)]="password">
+    <input [(ngModel)]="password" [ngStyle]="{ border:islogin && password==''? ' 2px solid red':''}">
     <button [ngStyle]="{'height':'30px', 'width':'70px', 'background-color':'gold', 'border':'none', 'margin-top':'15px', 'border-radius':'8px'}" (click)="onLogin()">Login</button>
   </div>
 </div>
