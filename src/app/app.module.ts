@@ -9,7 +9,6 @@ import { DashboardComponent } from './Home/dashboard/dashboard.component';
 import { StudentsComponent } from './Home/students/students.component';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './Pipe/filter.pipe';
-import { WelcomePipe } from './Pipe/welcome.pipe';
 import { RouterModule } from '@angular/router';
 import { WelcomeComponent } from './Home/welcome/welcome.component';
 import { AuthGuard } from './Guards/auth.guard';
@@ -17,6 +16,8 @@ import { ErrorComponent } from './Home/error/error.component';
 import { BalanceComponent } from './Home/balance/balance.component';
 import { AllStudentsComponent } from './Home/all-students/all-students.component';
 import { NoBalanceComponent } from './Home/no-balance/no-balance.component';
+import { NamesPipe } from './Pipe/names.pipe';
+import { WelcomePipe } from './Pipe/class.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,12 +26,13 @@ import { NoBalanceComponent } from './Home/no-balance/no-balance.component';
     DashboardComponent,
     StudentsComponent,
     FilterPipe,
-    WelcomePipe,
     WelcomeComponent,
     ErrorComponent,
     BalanceComponent,
     AllStudentsComponent,
-    NoBalanceComponent
+    NoBalanceComponent,
+    NamesPipe,
+    WelcomePipe
   ],
   imports: [
     BrowserModule,

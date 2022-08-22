@@ -9,21 +9,6 @@ export class AuthService {
   isLoggedIn(){
     return !!localStorage.getItem('token')
   }
-// isLoggedIn= false
 
-// loggedin(){
-// this.isLoggedIn=true
-// }
-// logout(){
-//   this.isLoggedIn=false
-// }
-// isauthnticated(){
-//  const promise = new Promise<boolean>((resolve,reject)=>{
-//   setTimeout(() => {
-// resolve(this.isLoggedIn)
-//   }, 500);
-//  })
-//  return promise
-// }
   constructor() { }
 }

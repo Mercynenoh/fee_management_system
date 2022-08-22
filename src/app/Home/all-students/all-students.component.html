@@ -14,10 +14,10 @@
           <th>Balance</th>
         </tr>
           <tr *ngFor="let students of student |searchfilter:filter">
-            <td>{{students.name}} </td>
-            <td>{{students.gender}}</td>
-            <td>{{students.class}}</td>
-            <td>{{students.balance}}</td>
+            <td>{{students.name |names:students.gender}} </td>
+            <td>{{students.gender }}</td>
+            <td>{{students.class | year}}</td>
+            <td>{{students.balance | currency:'Ksh.':true}}</td>
           </tr>
         </table>
     </div>
@@ -27,5 +27,5 @@
 <ng-template #noStudent>
   <p>No Students</p>
 </ng-template>
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
 

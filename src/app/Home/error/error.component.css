@@ -41,6 +41,9 @@ body{
 	width:850px;
 	font-family:'Century Gothic',Calibri,'Myriad Pro',Arial,Helvetica,sans-serif;
 	text-align:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h1{
@@ -48,6 +51,7 @@ h1{
 	font-size:60px;
 	text-shadow:3px 3px 0 #3D606D;
 	white-space:nowrap;
+
 }
 
 h2{

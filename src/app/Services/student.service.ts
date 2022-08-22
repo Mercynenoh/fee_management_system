@@ -9,21 +9,39 @@ export class StudentService {
   getStudents(): Student[] {
     return [
       {
-        name: 'Melinda Becker',
+        name: 'Sophie Mcpherson',
         gender: 'Female',
-        class: '2 red',
+        class: '2',
         balance: 5000,
       },
       {
-        name: 'Peter Drury',
+        name: 'Randolph Barajas',
         gender: 'Male',
-        class: '3 Green',
+        class: '3',
         balance: 10000,
       },
       {
-        name: 'Brett Young',
+        name: 'Jayson Macias',
         gender: 'Male',
-        class: '2 blue',
+        class: '2',
+        balance: 0,
+      },
+      {
+        name: 'Yolanda Gallegos',
+        gender: 'Female',
+        class: '2',
+        balance: 50000,
+      },
+      {
+        name: 'Josefa Rio',
+        gender: 'Female',
+        class: '3',
+        balance: 0,
+      },
+      {
+        name: 'Hiram Hickman',
+        gender: 'Male',
+        class: '2',
         balance: 0,
       },
     ];

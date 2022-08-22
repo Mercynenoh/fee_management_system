@@ -12,12 +12,13 @@ export class FilterPipe implements PipeTransform {
       return value
     }
     const student:Student[]=[]
-    for (let car of value){
-   if (car.name.toLowerCase().indexOf(name)!=-1){
-    student.push(car)
+    for (let students of value){
+   if (students.name.toLowerCase().indexOf(name)!=-1){
+    student.push(students)
    }
   }
   return student
 }
 
 }
+

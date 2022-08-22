@@ -20,6 +20,7 @@ export class DashboardComponent implements OnInit {
   constructor( private studentService:StudentService, private router:Router) { }
 
   ngOnInit(): void {
+    this.studentService.getStudents()
 
   }
     onBalance(){
