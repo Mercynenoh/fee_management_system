@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class WelcomePipe implements PipeTransform {
 
   transform(value:string): string {
-    let message = 'Year ' + value
+    let message = 'Grade ' + value
     return message
   }
 

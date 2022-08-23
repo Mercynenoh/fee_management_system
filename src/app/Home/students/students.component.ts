@@ -29,11 +29,9 @@ export class StudentsComponent implements OnInit {
     }
 else{
    this.StudentService.addStudent(this.student)
-   console.log((this.student));
-
     this.router.navigate(['dashboard'])
 
-  } 
+  }
 
   }
 

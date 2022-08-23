@@ -18,7 +18,7 @@ import { AllStudentsComponent } from './Home/all-students/all-students.component
 import { NoBalanceComponent } from './Home/no-balance/no-balance.component';
 import { NamesPipe } from './Pipe/names.pipe';
 import { WelcomePipe } from './Pipe/class.pipe';
-import { NobalancePipe } from './Pipe/nobalance.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,12 +34,13 @@ import { NobalancePipe } from './Pipe/nobalance.pipe';
     NoBalanceComponent,
     NamesPipe,
     WelcomePipe,
-    NobalancePipe
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

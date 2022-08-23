@@ -14,11 +14,11 @@ const routes: Routes = [
   {path: '', component: WelcomeComponent, children:[
     {path: 'login',component: LoginComponent},
   ]},
-  {path: 'dashboard', canActivate:[AuthGuard], component: DashboardComponent, children:[
-    {path: '', canActivate:[AuthGuard], component:AllStudentsComponent},
-    {path: 'addstudent', canActivate:[AuthGuard], component:StudentsComponent},
-    {path: 'balance', canActivate:[AuthGuard], component:BalanceComponent},
-    {path: 'nobalance',canActivate:[AuthGuard], component:NoBalanceComponent}
+  {path: 'dashboard', canActivateChild:[AuthGuard], component: DashboardComponent, children:[
+    {path: '',  component:AllStudentsComponent},
+    {path: 'addstudent',  component:StudentsComponent},
+    {path: 'balance',  component:BalanceComponent},
+    {path: 'nobalance', component:NoBalanceComponent}
   ]},
   {path: '**', component: ErrorComponent},
 ];

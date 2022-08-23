@@ -9,13 +9,13 @@ import { NobalancePipe } from 'src/app/Pipe/nobalance.pipe';
   styleUrls: ['./no-balance.component.css']
 })
 export class NoBalanceComponent implements OnInit {
-student!:Student[]
+  @Input() student!:Student[]
   filter=''
   nobalance=''
   constructor(private studentService:StudentService) { }
 
   ngOnInit(): void {
-    this.student = this.studentService.getStudents()
+    this.student= this.studentService.getStudents().filter(v=> v.balance===0)
   }
 
 }

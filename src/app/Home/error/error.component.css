@@ -8,6 +8,7 @@ body{
 	color:#eee;
 	font-family:Corbel,Arial,Helvetica,sans-serif;
 	font-size:13px;
+  /* height:63vh */
 }
 
 #rocket{
@@ -17,6 +18,7 @@ body{
 	margin:140px auto 50px;
   margin-top:0;
 	position:relative;
+  transition: tranform 0.5s;
 }
 
 
