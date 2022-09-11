@@ -50,9 +50,9 @@ export class StudentService {
     this.students.push(student)
   }
 
-  wobalance(){
-    this.students.filter(v=> v.balance===0)
-  }
+  // wobalance(){
+  //   this.students.filter(v=> v.balance===0)
+  // }
   constructor() {}
 
 

@@ -19,6 +19,7 @@ import { NoBalanceComponent } from './Home/no-balance/no-balance.component';
 import { NamesPipe } from './Pipe/names.pipe';
 import { WelcomePipe } from './Pipe/class.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavstyleDirective } from './Directives/navstyle.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +35,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NoBalanceComponent,
     NamesPipe,
     WelcomePipe,
+    NavstyleDirective,
 
   ],
   imports: [

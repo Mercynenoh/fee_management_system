@@ -15,7 +15,7 @@ export class NoBalanceComponent implements OnInit {
   constructor(private studentService:StudentService) { }
 
   ngOnInit(): void {
-    this.student= this.studentService.getStudents().filter(v=> v.balance===0)
+    this.student= this.studentService.getStudents().filter(v=> v.balance<=0)
   }
 
 }

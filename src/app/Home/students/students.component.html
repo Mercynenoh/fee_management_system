@@ -8,9 +8,9 @@
     <option value="Male">Male</option>
      <option value="Female">Female</option>
   </select>
-  <label>Year</label>
+  <label>Class</label>
   <input type="text" [(ngModel)]="student.class"  id=""/>
   <label>Balance</label>
-  <input [(ngModel)]="student.balance"/>
+  <input [(ngModel)]="student.balance" type="number" />
   <button class="add" (click)="onAdd()">Add</button>
 </div>

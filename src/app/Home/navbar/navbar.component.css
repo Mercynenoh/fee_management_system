@@ -2,3 +2,9 @@ img{
   margin-top: 5px;
   background-color: transparent;
 }
+.style{
+ height:70;
+  display:flex;
+   justify-content:space-around;
+   background-color:beige
+  }

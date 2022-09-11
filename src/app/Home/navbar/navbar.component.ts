@@ -9,7 +9,6 @@ import { AuthService } from 'src/app/Services/auth.service';
 export class NavbarComponent implements OnInit {
 
   constructor(public authService:AuthService) { }
-
   ngOnInit(): void {
 
   }
@@ -22,5 +21,8 @@ onclick(){
 onLogout(){
   localStorage.clear()
   location.href=''
+}
+addstyle(){
+  return 'style'
 }
 }
